@@ -12,10 +12,13 @@ public class RectCreater : MonoBehaviour
     public float YSize = 2;
     public int Rotation = 0;
     public Vector2 Direction = Vector2.up;
+    public Vector2 NormalizedDirection = Vector2.up;
     public float Distance = 3;
 
     public Rect Rect;
+    public Vector2 CenterRect = Vector2.up;
     public Rect RectTo;
+    public Vector2 CenterRectTo = Vector2.up;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +33,12 @@ public class RectCreater : MonoBehaviour
             gridCreater.GetComponent<GridController>().UpdateGrid(Color.cyan);
         }
         // all grid colored white
-        Rect = new Rect(Xmin, Ymin, XSize, YSize);//Quaternion.Euler(0, 0, Rotation) *
-        var to =  (Rect.center + Direction * Distance);
+        Rect = new Rect(Xmin, Ymin, XSize, YSize);
+        CenterRect = Rect.center;
+        NormalizedDirection = Direction.normalized;
+        var to =  Rect.center + NormalizedDirection * Distance;//Quaternion.Euler(0, 0, Rotation) *
         RectTo = CreateRectFromCenter(to, Rect.size.x, Rect.size.y);
+        CenterRectTo = RectTo.center;
 
         var hits = Physics2D.BoxCastAll(Rect.center, Rect.size, Rotation, Direction, Distance);
         if (hits.Length > 0)

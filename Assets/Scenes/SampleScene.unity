@@ -223,7 +223,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 8, y: 8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98021dd82bf5ce4d972a20dca1af901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MousePosition: {x: -42.967907, y: 14.901038, z: -26.236328}
-  MousePositionString: (-42.97, 14.90)
+  MousePosition: {x: -2.5312052, y: 8.07442, z: -5.828125}
+  MousePositionString: (-2.53, 8.07)
 --- !u!4 &1087735974
 Transform:
   m_ObjectHideFlags: 0
@@ -394,6 +394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2104903279}
   - component: {fileID: 2104903280}
+  - component: {fileID: 2104903281}
   m_Layer: 0
   m_Name: Rect
   m_TagString: Untagged
@@ -409,7 +410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104903278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -429,12 +430,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f52b2c523f6f048a0225e961f11270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Xmin: 0
-  Ymin: 0
+  Xmin: 5
+  Ymin: 5
   XSize: 2
   YSize: 2
   Rotation: 0
   Direction: {x: 0, y: 1}
+  NormalizedDirection: {x: 0, y: 1}
   Distance: 3
   Rect:
     serializedVersion: 2
@@ -442,9 +444,25 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  CenterRect: {x: 0, y: 1}
   RectTo:
     serializedVersion: 2
     x: 0
     y: 0
     width: 0
     height: 0
+  CenterRectTo: {x: 0, y: 1}
+--- !u!114 &2104903281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104903278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98021dd82bf5ce4d972a20dca1af901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MousePosition: {x: -2.5312052, y: 8.07442, z: -5.828125}
+  MousePositionString: (-2.53, 8.07)
