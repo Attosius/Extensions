@@ -33,12 +33,7 @@ public class RectCreater : MonoBehaviour
             gridCreater.GetComponent<GridController>().UpdateGrid(Color.cyan);
         }
         // all grid colored white
-        Rect = new Rect(Xmin, Ymin, XSize, YSize);
-        CenterRect = Rect.center;
-        NormalizedDirection = Direction.normalized;
-        var to =  Rect.center + NormalizedDirection * Distance;//Quaternion.Euler(0, 0, Rotation) *
-        RectTo = CreateRectFromCenter(to, Rect.size.x, Rect.size.y);
-        CenterRectTo = RectTo.center;
+        CreateRects();
 
         var hits = Physics2D.BoxCastAll(Rect.center, Rect.size, Rotation, Direction, Distance);
         if (hits.Length > 0)
@@ -52,6 +47,17 @@ public class RectCreater : MonoBehaviour
             //Rect.position = hitLeft[0].point;
         }
     }
+
+    private void CreateRects()
+    {
+        Rect = new Rect(Xmin, Ymin, XSize, YSize);
+        CenterRect = Rect.center;
+        NormalizedDirection = Direction.normalized;
+        var to = Rect.center + NormalizedDirection * Distance;//Quaternion.Euler(0, 0, Rotation) *
+        RectTo = CreateRectFromCenter(to, Rect.size.x, Rect.size.y);
+        CenterRectTo = RectTo.center;
+    }
+
     public Rect CreateRectFromCenter(Vector2 center, float width, float height)
     {
         float halfWidth = width / 2;

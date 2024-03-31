@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridItemSmall: {fileID: 7685950389142510340, guid: 93662b6dce2e8e241845bd585cdbe53c, type: 3}
-  mapWidth: 200
+  mapWidth: 40
   gridItems: []
 --- !u!1 &519420028
 GameObject:
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98021dd82bf5ce4d972a20dca1af901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MousePosition: {x: -2.5312052, y: 8.07442, z: -5.828125}
-  MousePositionString: (-2.53, 8.07)
+  MousePosition: {x: 35.58921, y: 5.8209605, z: -14.74707}
+  MousePositionString: (35.59, 5.82)
 --- !u!4 &1087735974
 Transform:
   m_ObjectHideFlags: 0
@@ -464,5 +464,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98021dd82bf5ce4d972a20dca1af901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MousePosition: {x: -2.5312052, y: 8.07442, z: -5.828125}
-  MousePositionString: (-2.53, 8.07)
+  MousePosition: {x: 35.58921, y: 5.8209605, z: -14.74707}
+  MousePositionString: (35.59, 5.82)

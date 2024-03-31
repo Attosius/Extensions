@@ -9,7 +9,7 @@ public class GridController : MonoBehaviour
 {
     public GameObject gridItemSmall;
     //public GameObject mapOuter;
-    public int mapWidth = 100;
+    public int mapWidth = 20;
     public List<GameObject> gridItems = new List<GameObject>();
 
     void Start()
